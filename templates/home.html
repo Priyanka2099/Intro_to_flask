@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Homepage</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<style>
+  body{
+   background-image: url('/static/bg1.png');
+   color: white;
+   font-family: "Georgia"
+   }
+
+</style>
+    <header>
+        <h1 align="center">{{ Data8 }}</h1>
+        <h1 align="center">{{Data9}}</h1>
+        <h1 align="center">{{Data11}}</h1>
+        <h1 align="center">{{Data10}}</h1>
+        <h1 align="center">{{ Data7 }}</h1>
+        <div class="container">
+            <form action="/sid1" method="POST">
+                <button class="btn btn-lg btn-primary btn-block" style="margin-left:100px;margin-top:200px;border:none;background-color: Black;width: 230px;height:70px;font-size:25px" type="submit" style="background-color:black">student</button>
+
+            </form>
+            <form action="/pid1" metod="POST">
+            <button class="btn btn-lg btn-primary btn-block" style="margin-left:100px;margin-top:100px;border: none;background-color: Black;width: 230px;height:70px;font-size:25px" type="submit" style="background-color:black">Proctor</button>
+            </form>
+            <form action="/gid2" method="POST">
+            <button class="btn btn-lg btn-primary btn-block" style="margin-left:100px;margin-top:100px;border:none;background-color: Black;width: 230px;height:80px;font-size:25px" type="submit" style="background-color:black">Parent/Guardian</button>
+            </form>
+
+        </div>
+    </div>
+    {% if checkvar3 %}
+<div id="id3" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container"  input100">
+      <span style="margin-left:770px;margin-top:-10px;" onclick="document.getElementById('id3').style.display='none'"
+      class="w3-button w3-display-topright" >&times;</span>
+      <div class="container">
+            <form action="/studid" method="POST">
+                <input  style="width:300px;height:50px;font-size:25px;margin-left:800px;margin-top:-500px;text-align:center" type="text" name="sid" placeholder="Enter sid" required><br><br><br><br>
+                <div  class="container-login100-form-btn">
+						<button style="margin-left:850px;margin-top:-300px;font-size:30px;border: none;background-color: Black;color:White;width: 200px;height:50px;" login100-form-btn" onclick="location.href='home.html';">
+							Submit
+						</button>
+
+					</div>
+            </form>
+        </div>
+
+    </div>
+  </div>
+</div>
+{% endif %}
+        {% if checkvar4 %}
+<div id="id4" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container"  input100">
+      <span style="margin-left:770px;margin-top:-10px;" onclick="document.getElementById('id4').style.display='none'"
+      class="w3-button w3-display-topright" >&times;</span>
+      <div class="container">
+            <form action="/proctid" method="POST">
+                <input  style="width:300px;height:50px;font-size:25px;margin-left:800px;margin-top:-500px;text-align:center" type="text" name="prid" placeholder="Enter pid" required><br><br><br><br>
+                <div  class="container-login100-form-btn">
+						<button style="margin-left:850px;margin-top:-300px;font-size:30px;border: none;background-color: Black;color:White;width: 200px;height:50px;" login100-form-btn" ">
+							Submit
+						</button>
+					</div>
+            </form>
+        </div>
+
+    </div>
+  </div>
+</div>
+        {% endif %}
+{% if checkvar5 %}
+<div id="id5" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container"  input100">
+      <span style="margin-left:770px;margin-top:-10px;" onclick="document.getElementById('id5').style.display='none'"
+      class="w3-button w3-display-topright" >&times;</span>
+      <div class="container">
+            <form action="/parentid" method="POST">
+                <input  style="width:300px;height:50px;font-size:25px;margin-left:800px;margin-top:-500px;text-align:center" type="text" name="gid" placeholder="Enter sid" required><br><br>
+                 <input  style="width:300px;height:50px;font-size:25px;margin-left:800px;margin-top:-500px;text-align:center" type="text" name="gname" placeholder="Enter name" required><br><br><br><br>
+                <div  class="container-login100-form-btn">
+						<button style="margin-left:850px;margin-top:-300px;font-size:30px;border: none;background-color: Black;color:White;width: 200px;height:50px;" login100-form-btn" ">
+							Submit
+						</button>
+					</div>
+            </form>
+        </div>
+
+    </div>
+  </div>
+</div>
+{% endif %}
+
+    </header>
+
+</html>

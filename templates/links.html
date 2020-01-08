@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Links</title>
+</head>
+<style>
+  body{
+   background-image: url('/static/bg1.png');
+   color: white;
+   font-family: "Georgia"
+   }
+   div.transbox {
+    margin: 30px
+    background-color: #ffffff;
+    border:1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+div.transbox p {
+    margin: 5%;
+    font-size: 40px;
+    height:30px;
+    font-family: "Georgia";
+    color: #11111;
+    }
+ </style>
+<body >
+<h1 align="center" style="font-size:300%;">Welcome {{ Dat1 }}</h1><br>
+{% if check==False %}
+<h1 align="center" style="font-size:300%;">{{ Data }} is your proctor</h1><br>
+{% endif %}
+<h2 align="center" style="font-size:250%;">Useful links</h2><br>
+<div style="text-align:center">
+    <p style="font-size:200%;">
+        <marquee direction="right" onmouseover="stop()" onmouseout="start()" scrollamount="12"><a href="/ia" style="color:#7FFFD4;font-size:40px">Enter IA or Sem exam marks<br><br></a></marquee>
+
+        <marquee direction="right" onmouseover="stop()" onmouseout="start()" scrollamount="12"><a href="/ia1" style="color:#7FFFD4;font-size:40px">Enter your attendance status<br><br></a></marquee>
+        <marquee direction="right" onmouseover="stop()" onmouseout="start()" scrollamount="12"><a href="/ia3" style="color:#7FFFD4;font-size:40px">View suggestion given by proctor<br><br></a></marquee>
+    </p>
+</div>
+
+{% if check %}
+<div id="id02" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id02').style.display='none'"
+      class="w3-button w3-display-topright" >&times;</span>
+      <div  style=margin-left:60px;width:500px;height:350px;" class="background">
+      <div style="margin-left:5px;width:500px;height:350px;text-align:justify;text-justify: auto;word-spacing: 3px;" class="transbox">
+        <p style="font-size:35px;">{{Dat10}}</p>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+{% endif %}
+</body>
+</html>

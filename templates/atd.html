@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>attendance</title>
+</head>
+<style>
+  body{
+   background-image: url('/static/bg1.png');
+   color: white;
+   font-family: "Georgia"
+   }
+   </style>
+<body><center>
+
+    <form action="/sub2" method="POST" style="font-size:100%;">
+        <h2> {{ Data1 }}</h2>
+
+        <table align="center">
+            <tr>
+                <td style="font-size:30px">
+                    Enter test type:
+                </td>
+                <td style="font-size:20px">
+
+                    <input type="radio" name="t1" value="Term1"  style="height:50px;font-size:14pt" >Term1
+                    <input type="radio" name="t1" value="Term2"  style="height:50px;font-size:14pt" >Term2
+
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr style="font-size:30px">
+                <td>
+                    17CS81:
+                </td>
+                <td>
+                    <input type="text" name="atd1" placeholder="Enter attendance(in %)" 15CS81="" style="height:50px;font-size:14pt" required >
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr style="font-size:30px">
+                <td>
+                    17CS82:
+                </td>
+                <td>
+                    <input type="text" name="atd2" placeholder="Enter attendance(in %)" 15CS82="" style="height:50px;font-size:14pt" required >
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr style="font-size:30px">
+                <td>
+                    17CS83:
+                </td>
+                <td>
+                    <input type="text" name="atd3" placeholder="Enter attendance(in %)" 15CS83="" style="height:50px;font-size:14pt" required >
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr style="font-size:30px">
+                <td>
+                    17CS84:
+                </td>
+                <td>
+                    <input type="text" name="atd4" placeholder="Enter attendance(in %)" 15CS84="" style="height:50px;font-size:14pt"required >
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr style="font-size:30px">
+                <td>
+                    17CS85:
+                </td>
+                <td>
+                    <input type="text" name="atd5" placeholder="Enter attendance(in %)" 15CS85=""  style="height:50px;font-size:14pt"required >
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:30px">
+                    17CS86:
+                </td>
+                <td>
+                    <input type="text" name="atd6" placeholder="Enter attendance(in %)" 15CS86="" style="height:50px;font-size:14pt" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr style="font-size:30px">
+                <td>
+                    Problem(if any):
+                </td>
+                <td>
+                    <input type="text" name="atd7" placeholder="Problem Description" rows="30" cols="30" size="50" style="height:50px;font-size:14pt">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+
+            <tr style="font-size:30px">
+                <td>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" style="height:50px;font-size:14pt">Submit</button>
+
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+    </center>
+
+</body>
+</html>

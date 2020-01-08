@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <title>
+        List of students</title>
+        <style>
+        table, th, td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse:
+       collapse;
+       }
+    </style>
+    <style>
+  body{
+   background-image: url('/static/bg1.png');
+   color: white;
+   font-family: "Georgia"
+   }
+   table, th, td
+   {
+   border: 3px solid black;
+   }
+   </style>
+</head>
+<body>
+
+<h1 align="center"> Welcome {{ Dat5 }}</h1>
+<h1 align="center" style="margin-top:30px;font-size:40px">List of students</h1>
+
+<form class="login100-form validate-form" action="/sug" method="POST">
+
+    <div class="container">
+<h1>{{ Data4 }}</h1>
+        <table border="1" style="font-size:25px;margin-top:-500px;margin-left:200px;border-width:thick thick thick thick;">
+
+            <tr style="border-bottom:5px solid black; border-width: thick;border-height:thick" >
+                <th>Sid</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Branch</th>
+                <th>DOB</th>
+                <th>phone</th>
+                <th>Address</th>
+                <th>Problem</th>
+                <th>Suggestion</th>
+            </tr>
+            {% for i in Data %}
+            <tr style="border-bottom:5px solid black; border-width: thick">
+                {% for j in i %}
+                    <td>{{ j }}</td>
+            <br>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div><br><br><br>
+    <div class="wrap-input100 validate-input" data-validate = "Enter sid">
+        <h3 style="font-size:30px;margin-left:60px">Enter sid </h3>
+        <input style="font-size:20px;margin-left:180px;height:30px" input100" type="text" name="inp" placeholder="Enter sid">
+ 					</div><br>
+
+					<div style="font-size:20px;margin-left:180px;" class="container-login100-form-btn">
+						<button onclick="document.getElementById('id2').style.display='block'"
+class="w3-button" style="font-size:25px;" class="login100-form-btn" onclick="location.href='Student.html';">
+							Submit
+						</button>
+					</div>
+</form>
+    {% if checkvar1 %}
+    <form class="login100-form validate-form" action="/sug1" method="POST">
+<div id="id2" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id2').style.display='none'"
+      class="w3-button w3-display-topright" >&times;</span>
+
+        <div class="wrap-input100 validate-input" data-validate = "Enter suggestion"><br>
+        <input style="font-size:30px;margin-left:100px;margin-top:200px;height:150px;" class="input100" type="text" name="inp1" placeholder="Give your suggestion" size="50" style="height:150px;font-size:14pt>
+ 					</div>
+					<div class="container-login100-form-btn"><br><br>
+						<button style="font-size:30px;left-margin:100px" login100-form-btn" onclick="location.href='Student.html';">
+							Submit
+						</button>
+					</div>
+    </div>
+  </div>
+</div>
+    </form>
+{% endif %}
+
+</body>
+</html>
