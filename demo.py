@@ -87,7 +87,6 @@ def home():
 def logout():
     return redirect(url_for('index'))
 
-
 @app.route('/sid1',methods=['GET','POST'])
 def stu():
     return render_template('home.html',checkvar3=True)
@@ -210,7 +209,20 @@ def suggest1():
     cursor.execute("""UPDATE Student set Suggestion= ? where Sid=?""", (var2, var1))
     conn.commit()
     return render_template('Student.html',Data4=msg4)
-
+@app.route('/sug2', methods=['GET','POST'])
+def suggest2():
+    conn = sqlite3.connect('project.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT Res_type,Sub_code,Marks from Results where Sid=%s " % var1)
+    data35=cursor.fetchall()
+    return render_template('marks.html',Data=data35)
+@app.route('/sug3', methods=['GET','POST'])
+def suggest3():
+    conn = sqlite3.connect('project.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT Term,Sub_code,Atd_percentage from Attendance where Sid=%s " % var1)
+    data36=cursor.fetchall()
+    return render_template('attendance.html',Data=data36)
 
 @app.route('/submit', methods=['GET','POST'])
 def sub():

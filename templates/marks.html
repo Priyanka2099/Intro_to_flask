@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marks</title>
+</head>
+<style>
+        table, th, td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse:
+       collapse;
+       }
+    </style>
+    <style>
+  body{
+   background-image: url('/static/bg1.png');
+   color: white;
+   font-family: "Georgia"
+   }
+   table, th, td
+   {
+   border: 3px solid black;
+   }
+   </style>
+<body>
+
+<form class="login100-form validate-form" action="/sug2" method="POST">
+    <div class="container">
+        <h1>Exam results:</h1>
+        <table border="1" style="font-size:25px;margin-top:-900px;margin-left:200px;border-width:thick thick thick thick;">
+
+            <tr style="border-bottom:5px solid black; border-width: thick;border-height:thick" >
+                <th>Res_type</th>
+                <th>Sub_code</th>
+                <th>Marks</th>
+
+            </tr>
+            {% for i in Data %}
+            <tr style="border-bottom:5px solid black; border-width: thick">
+                {% for j in i %}
+                    <td>{{ j }}</td>
+            <br>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+</form>
+</body>
+</html>
